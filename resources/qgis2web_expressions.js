@@ -766,7 +766,7 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_routes_3rule0_eval_expression(context) {
+function exp_routes_1rule0_eval_expression(context) {
     // Status = 'true'
 
     var feature = context.feature;
@@ -779,7 +779,7 @@ function exp_routes_3rule0_eval_expression(context) {
 }
 
 
-function exp_routes_3rule1_eval_expression(context) {
+function exp_routes_1rule1_eval_expression(context) {
     // Status = 'false'
 
     var feature = context.feature;
@@ -792,7 +792,7 @@ function exp_routes_3rule1_eval_expression(context) {
 }
 
 
-function exp_routes_3rule2_eval_expression(context) {
+function exp_routes_1rule2_eval_expression(context) {
     // Status = 'next'
 
     var feature = context.feature;
@@ -805,7 +805,7 @@ function exp_routes_3rule2_eval_expression(context) {
 }
 
 
-function exp_routes_3rule3_eval_expression(context) {
+function exp_routes_1rule3_eval_expression(context) {
     // Status = 'optional'
 
     var feature = context.feature;
@@ -814,5 +814,18 @@ function exp_routes_3rule3_eval_expression(context) {
         return (feature.get('Status')  == 'optional');
     } else {
         return (feature.get('Status')  == 'optional');
+    }
+}
+
+
+function exp_routes_1rule4_eval_expression(context) {
+    // Status = 'adjust'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.get('Status')  == 'adjust');
+    } else {
+        return (feature.get('Status')  == 'adjust');
     }
 }
