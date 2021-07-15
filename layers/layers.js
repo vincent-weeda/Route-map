@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-ol.proj.get("EPSG:3067").setExtent([385982.923209, 6672856.351102, 387610.486541, 6674006.039530]);
+ol.proj.get("EPSG:3067").setExtent([381966.874222, 6674953.878910, 382700.571588, 6675472.152673]);
 var wms_layers = [];
 
 
@@ -28,29 +28,29 @@ var lyr_routes_1 = new ol.layer.Vector({
                 interactive: true,
                 title: 'routes'
             });
-var format_gpstracks1506_2 = new ol.format.GeoJSON();
-var features_gpstracks1506_2 = format_gpstracks1506_2.readFeatures(json_gpstracks1506_2, 
+var format_gpstrack157_2 = new ol.format.GeoJSON();
+var features_gpstrack157_2 = format_gpstrack157_2.readFeatures(json_gpstrack157_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3067'});
-var jsonSource_gpstracks1506_2 = new ol.source.Vector({
+var jsonSource_gpstrack157_2 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_gpstracks1506_2.addFeatures(features_gpstracks1506_2);
-var lyr_gpstracks1506_2 = new ol.layer.Vector({
+jsonSource_gpstrack157_2.addFeatures(features_gpstrack157_2);
+var lyr_gpstrack157_2 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_gpstracks1506_2, 
-                style: style_gpstracks1506_2,
+                source:jsonSource_gpstrack157_2, 
+                style: style_gpstrack157_2,
                 interactive: true,
-                title: '<img src="styles/legend/gpstracks1506_2.png" /> gps tracks 15.06'
+                title: '<img src="styles/legend/gpstrack157_2.png" /> gps track 15.7'
             });
 
-lyr_basemap_0.setVisible(true);lyr_routes_1.setVisible(true);lyr_gpstracks1506_2.setVisible(true);
-var layersList = [lyr_basemap_0,lyr_routes_1,lyr_gpstracks1506_2];
+lyr_basemap_0.setVisible(true);lyr_routes_1.setVisible(true);lyr_gpstrack157_2.setVisible(true);
+var layersList = [lyr_basemap_0,lyr_routes_1,lyr_gpstrack157_2];
 lyr_routes_1.set('fieldAliases', {'fid': 'fid', 'Distance': 'Distance', 'Area': 'Area', 'Status': 'Status', });
-lyr_gpstracks1506_2.set('fieldAliases', {'fid': 'fid', 'Area': 'Area', 'Distance': 'Distance', 'Date': 'Date', 'Time': 'Time', 'Pace': 'Pace', 'Elevation': 'Elevation', 'Link': 'Link', 'Streets': 'Streets', 'run': 'run', });
+lyr_gpstrack157_2.set('fieldAliases', {'fid': 'fid', 'Area': 'Area', 'Distance': 'Distance', 'Date': 'Date', 'Time': 'Time', 'Pace': 'Pace', 'Elevation': 'Elevation', 'Link': 'Link', 'Streets': 'Streets', 'run': 'run', });
 lyr_routes_1.set('fieldImages', {'fid': 'Hidden', 'Distance': 'TextEdit', 'Area': 'TextEdit', 'Status': 'TextEdit', });
-lyr_gpstracks1506_2.set('fieldImages', {'fid': 'Hidden', 'Area': 'TextEdit', 'Distance': 'TextEdit', 'Date': 'DateTime', 'Time': 'TextEdit', 'Pace': 'TextEdit', 'Elevation': 'TextEdit', 'Link': 'TextEdit', 'Streets': 'Range', 'run': 'Range', });
+lyr_gpstrack157_2.set('fieldImages', {'fid': '', 'Area': '', 'Distance': '', 'Date': '', 'Time': '', 'Pace': '', 'Elevation': '', 'Link': '', 'Streets': '', 'run': '', });
 lyr_routes_1.set('fieldLabels', {'Distance': 'inline label', 'Area': 'inline label', 'Status': 'inline label', });
-lyr_gpstracks1506_2.set('fieldLabels', {'Area': 'inline label', 'Distance': 'inline label', 'Date': 'inline label', 'Time': 'inline label', 'Pace': 'inline label', 'Elevation': 'inline label', 'Link': 'inline label', 'Streets': 'inline label', 'run': 'inline label', });
-lyr_gpstracks1506_2.on('precompose', function(evt) {
+lyr_gpstrack157_2.set('fieldLabels', {'fid': 'inline label', 'Area': 'inline label', 'Distance': 'inline label', 'Date': 'inline label', 'Time': 'inline label', 'Pace': 'inline label', 'Elevation': 'inline label', 'Link': 'inline label', 'Streets': 'inline label', 'run': 'inline label', });
+lyr_gpstrack157_2.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });

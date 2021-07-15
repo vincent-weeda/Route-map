@@ -45,7 +45,7 @@ var style_routes_1 = function(feature, resolution){
                     }
                     else if (exp_routes_1rule2_eval_expression(context)) {
                       return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3}),
+        stroke: new ol.style.Stroke({color: 'rgba(229,182,54,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 5}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
@@ -53,7 +53,7 @@ var style_routes_1 = function(feature, resolution){
                     }
                     else if (exp_routes_1rule3_eval_expression(context)) {
                       return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(255,127,0,1.0)', lineDash: [1,5], lineCap: 'square', lineJoin: 'bevel', width: 1}),
+        stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
@@ -61,7 +61,7 @@ var style_routes_1 = function(feature, resolution){
                     }
                     else if (exp_routes_1rule4_eval_expression(context)) {
                       return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(229,182,54,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 5}),
+        stroke: new ol.style.Stroke({color: 'rgba(255,127,0,1.0)', lineDash: [1,5], lineCap: 'square', lineJoin: 'bevel', width: 1}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
