@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_routes_1 = function(feature, resolution){
+var style_routes_3 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -21,13 +21,13 @@ var style_routes_1 = function(feature, resolution){
         labelText = String("");
     }
     
-        function rules_routes_1(feature, value) {
+        function rules_routes_3(feature, value) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_routes_1rule0_eval_expression(context)) {
+            if (exp_routes_3rule0_eval_expression(context)) {
                       return [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(236,236,236,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 0}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
@@ -35,33 +35,33 @@ var style_routes_1 = function(feature, resolution){
                               bufferWidth)
     })];
                     }
-                    else if (exp_routes_1rule1_eval_expression(context)) {
+                    else if (exp_routes_3rule1_eval_expression(context)) {
                       return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(162,162,162,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1}),
+        stroke: new ol.style.Stroke({color: 'rgba(141,141,141,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
     })];
                     }
-                    else if (exp_routes_1rule2_eval_expression(context)) {
+                    else if (exp_routes_3rule2_eval_expression(context)) {
                       return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(229,182,54,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 5}),
+        stroke: new ol.style.Stroke({color: 'rgba(229,182,54,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
     })];
                     }
-                    else if (exp_routes_1rule3_eval_expression(context)) {
+                    else if (exp_routes_3rule3_eval_expression(context)) {
                       return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3}),
+        stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
     })];
                     }
-                    else if (exp_routes_1rule4_eval_expression(context)) {
+                    else if (exp_routes_3rule4_eval_expression(context)) {
                       return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(255,127,0,1.0)', lineDash: [1,5], lineCap: 'square', lineJoin: 'bevel', width: 1}),
+        stroke: new ol.style.Stroke({color: 'rgba(255,127,0,1.0)', lineDash: [1,5], lineCap: 'square', lineJoin: 'bevel', width: 3}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
@@ -71,7 +71,7 @@ var style_routes_1 = function(feature, resolution){
                 return [];
             }
         }
-        var style = rules_routes_1(feature, value);
+        var style = rules_routes_3(feature, value);
         ;
 
     return style;
