@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_routes_3 = function(feature, resolution){
+var style_routes_5 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -21,13 +21,13 @@ var style_routes_3 = function(feature, resolution){
         labelText = String("");
     }
     
-        function rules_routes_3(feature, value) {
+        function rules_routes_5(feature, value) {
             var context = {
                 feature: feature,
                 variables: {}
             };
             // Start of if blocks and style check logic
-            if (exp_routes_3rule0_eval_expression(context)) {
+            if (exp_routes_5rule0_eval_expression(context)) {
                       return [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(236,236,236,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 0}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
@@ -35,15 +35,15 @@ var style_routes_3 = function(feature, resolution){
                               bufferWidth)
     })];
                     }
-                    else if (exp_routes_3rule1_eval_expression(context)) {
+                    else if (exp_routes_5rule1_eval_expression(context)) {
                       return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 2}),
+        stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 6}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
     })];
                     }
-                    else if (exp_routes_3rule2_eval_expression(context)) {
+                    else if (exp_routes_5rule2_eval_expression(context)) {
                       return [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(229,182,54,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
@@ -51,7 +51,7 @@ var style_routes_3 = function(feature, resolution){
                               bufferWidth)
     })];
                     }
-                    else if (exp_routes_3rule3_eval_expression(context)) {
+                    else if (exp_routes_5rule3_eval_expression(context)) {
                       return [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
@@ -59,7 +59,7 @@ var style_routes_3 = function(feature, resolution){
                               bufferWidth)
     })];
                     }
-                    else if (exp_routes_3rule4_eval_expression(context)) {
+                    else if (exp_routes_5rule4_eval_expression(context)) {
                       return [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'round', lineJoin: 'round', width: 2}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
@@ -71,7 +71,7 @@ var style_routes_3 = function(feature, resolution){
                 return [];
             }
         }
-        var style = rules_routes_3(feature, value);
+        var style = rules_routes_5(feature, value);
         ;
 
     return style;
