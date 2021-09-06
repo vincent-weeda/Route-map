@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-ol.proj.get("EPSG:3067").setExtent([378161.544453, 6667734.204393, 405426.743144, 6686079.556925]);
+ol.proj.get("EPSG:3067").setExtent([377524.050263, 6667289.846421, 405542.566721, 6686853.198559]);
 var wms_layers = [];
 
 
@@ -38,77 +38,89 @@ var wms_layers = [];
                 url: 'http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}'
             })
         });
-var format_helsinkiborder_3 = new ol.format.GeoJSON();
-var features_helsinkiborder_3 = format_helsinkiborder_3.readFeatures(json_helsinkiborder_3, 
+
+        var lyr_OpenStreetMap_3 = new ol.layer.Tile({
+            'title': 'OpenStreetMap',
+            'type': 'base',
+            'opacity': 1.000000,
+            
+            
+            source: new ol.source.XYZ({
+    attributions: ' ',
+                url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+            })
+        });
+var format_helsinkiborder_4 = new ol.format.GeoJSON();
+var features_helsinkiborder_4 = format_helsinkiborder_4.readFeatures(json_helsinkiborder_4, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3067'});
-var jsonSource_helsinkiborder_3 = new ol.source.Vector({
+var jsonSource_helsinkiborder_4 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_helsinkiborder_3.addFeatures(features_helsinkiborder_3);
-var lyr_helsinkiborder_3 = new ol.layer.Vector({
+jsonSource_helsinkiborder_4.addFeatures(features_helsinkiborder_4);
+var lyr_helsinkiborder_4 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_helsinkiborder_3, 
-                style: style_helsinkiborder_3,
+                source:jsonSource_helsinkiborder_4, 
+                style: style_helsinkiborder_4,
                 interactive: true,
-                title: '<img src="styles/legend/helsinkiborder_3.png" /> helsinki border'
+                title: '<img src="styles/legend/helsinkiborder_4.png" /> helsinki border'
             });
-var format_missedstreets_4 = new ol.format.GeoJSON();
-var features_missedstreets_4 = format_missedstreets_4.readFeatures(json_missedstreets_4, 
+var format_missedstreets_5 = new ol.format.GeoJSON();
+var features_missedstreets_5 = format_missedstreets_5.readFeatures(json_missedstreets_5, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3067'});
-var jsonSource_missedstreets_4 = new ol.source.Vector({
+var jsonSource_missedstreets_5 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_missedstreets_4.addFeatures(features_missedstreets_4);
-var lyr_missedstreets_4 = new ol.layer.Vector({
+jsonSource_missedstreets_5.addFeatures(features_missedstreets_5);
+var lyr_missedstreets_5 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_missedstreets_4, 
-                style: style_missedstreets_4,
+                source:jsonSource_missedstreets_5, 
+                style: style_missedstreets_5,
                 interactive: true,
-                title: '<img src="styles/legend/missedstreets_4.png" /> missed streets'
+                title: '<img src="styles/legend/missedstreets_5.png" /> missed streets'
             });
-var format_routes_5 = new ol.format.GeoJSON();
-var features_routes_5 = format_routes_5.readFeatures(json_routes_5, 
+var format_routes_6 = new ol.format.GeoJSON();
+var features_routes_6 = format_routes_6.readFeatures(json_routes_6, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3067'});
-var jsonSource_routes_5 = new ol.source.Vector({
+var jsonSource_routes_6 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_routes_5.addFeatures(features_routes_5);
-var lyr_routes_5 = new ol.layer.Vector({
+jsonSource_routes_6.addFeatures(features_routes_6);
+var lyr_routes_6 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_routes_5, 
-                style: style_routes_5,
+                source:jsonSource_routes_6, 
+                style: style_routes_6,
                 interactive: true,
                 title: 'routes'
             });
-var format_gpstracks29_6 = new ol.format.GeoJSON();
-var features_gpstracks29_6 = format_gpstracks29_6.readFeatures(json_gpstracks29_6, 
+var format_gpstracks59_7 = new ol.format.GeoJSON();
+var features_gpstracks59_7 = format_gpstracks59_7.readFeatures(json_gpstracks59_7, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3067'});
-var jsonSource_gpstracks29_6 = new ol.source.Vector({
+var jsonSource_gpstracks59_7 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_gpstracks29_6.addFeatures(features_gpstracks29_6);
-var lyr_gpstracks29_6 = new ol.layer.Vector({
+jsonSource_gpstracks59_7.addFeatures(features_gpstracks59_7);
+var lyr_gpstracks59_7 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_gpstracks29_6, 
-                style: style_gpstracks29_6,
+                source:jsonSource_gpstracks59_7, 
+                style: style_gpstracks59_7,
                 interactive: true,
-                title: '<img src="styles/legend/gpstracks29_6.png" /> gps tracks 2.9'
+                title: '<img src="styles/legend/gpstracks59_7.png" /> gps tracks 5.9'
             });
 
-lyr_CartoPositron_0.setVisible(true);lyr_GoogleMaps_1.setVisible(false);lyr_GoogleSatellite_2.setVisible(false);lyr_helsinkiborder_3.setVisible(true);lyr_missedstreets_4.setVisible(true);lyr_routes_5.setVisible(true);lyr_gpstracks29_6.setVisible(true);
-var layersList = [lyr_CartoPositron_0,lyr_GoogleMaps_1,lyr_GoogleSatellite_2,lyr_helsinkiborder_3,lyr_missedstreets_4,lyr_routes_5,lyr_gpstracks29_6];
-lyr_helsinkiborder_3.set('fieldAliases', {'fid': 'fid', });
-lyr_missedstreets_4.set('fieldAliases', {'fid': 'fid', 'Street': 'Street', 'Area': 'Area', });
-lyr_routes_5.set('fieldAliases', {'fid': 'fid', 'Distance': 'Distance', 'Area': 'Area', 'Status': 'Status', });
-lyr_gpstracks29_6.set('fieldAliases', {'fid': 'fid', 'Area': 'Area', 'Distance': 'Distance', 'Date': 'Date', 'Time': 'Time', 'Pace': 'Pace', 'Elevation': 'Elevation', 'Link': 'Link', 'Streets': 'Streets', 'run': 'run', });
-lyr_helsinkiborder_3.set('fieldImages', {'fid': 'Hidden', });
-lyr_missedstreets_4.set('fieldImages', {'fid': 'Hidden', 'Street': 'TextEdit', 'Area': 'TextEdit', });
-lyr_routes_5.set('fieldImages', {'fid': 'Hidden', 'Distance': 'TextEdit', 'Area': 'TextEdit', 'Status': 'TextEdit', });
-lyr_gpstracks29_6.set('fieldImages', {'fid': 'Hidden', 'Area': 'TextEdit', 'Distance': 'TextEdit', 'Date': 'DateTime', 'Time': 'TextEdit', 'Pace': 'TextEdit', 'Elevation': 'TextEdit', 'Link': 'TextEdit', 'Streets': 'Range', 'run': 'Range', });
-lyr_helsinkiborder_3.set('fieldLabels', {});
-lyr_missedstreets_4.set('fieldLabels', {'Street': 'inline label', 'Area': 'inline label', });
-lyr_routes_5.set('fieldLabels', {'Distance': 'inline label', 'Area': 'inline label', 'Status': 'inline label', });
-lyr_gpstracks29_6.set('fieldLabels', {'Area': 'inline label', 'Distance': 'inline label', 'Date': 'inline label', 'Time': 'inline label', 'Pace': 'inline label', 'Elevation': 'inline label', 'Link': 'inline label', 'Streets': 'inline label', 'run': 'inline label', });
-lyr_gpstracks29_6.on('precompose', function(evt) {
+lyr_CartoPositron_0.setVisible(true);lyr_GoogleMaps_1.setVisible(false);lyr_GoogleSatellite_2.setVisible(false);lyr_OpenStreetMap_3.setVisible(false);lyr_helsinkiborder_4.setVisible(true);lyr_missedstreets_5.setVisible(true);lyr_routes_6.setVisible(true);lyr_gpstracks59_7.setVisible(true);
+var layersList = [lyr_CartoPositron_0,lyr_GoogleMaps_1,lyr_GoogleSatellite_2,lyr_OpenStreetMap_3,lyr_helsinkiborder_4,lyr_missedstreets_5,lyr_routes_6,lyr_gpstracks59_7];
+lyr_helsinkiborder_4.set('fieldAliases', {'fid': 'fid', });
+lyr_missedstreets_5.set('fieldAliases', {'fid': 'fid', 'Street': 'Street', 'Area': 'Area', });
+lyr_routes_6.set('fieldAliases', {'fid': 'fid', 'Distance': 'Distance', 'Area': 'Area', 'Status': 'Status', });
+lyr_gpstracks59_7.set('fieldAliases', {'fid': 'fid', 'Area': 'Area', 'Distance': 'Distance', 'Date': 'Date', 'Time': 'Time', 'Pace': 'Pace', 'Elevation': 'Elevation', 'Link': 'Link', 'Streets': 'Streets', 'run': 'run', });
+lyr_helsinkiborder_4.set('fieldImages', {'fid': 'Hidden', });
+lyr_missedstreets_5.set('fieldImages', {'fid': 'Hidden', 'Street': 'TextEdit', 'Area': 'TextEdit', });
+lyr_routes_6.set('fieldImages', {'fid': 'Hidden', 'Distance': 'TextEdit', 'Area': 'TextEdit', 'Status': 'TextEdit', });
+lyr_gpstracks59_7.set('fieldImages', {'fid': 'Hidden', 'Area': 'TextEdit', 'Distance': 'TextEdit', 'Date': 'DateTime', 'Time': 'TextEdit', 'Pace': 'TextEdit', 'Elevation': 'TextEdit', 'Link': 'TextEdit', 'Streets': 'Range', 'run': 'Range', });
+lyr_helsinkiborder_4.set('fieldLabels', {});
+lyr_missedstreets_5.set('fieldLabels', {'Street': 'inline label', 'Area': 'inline label', });
+lyr_routes_6.set('fieldLabels', {'Distance': 'inline label', 'Area': 'inline label', 'Status': 'inline label', });
+lyr_gpstracks59_7.set('fieldLabels', {'Area': 'inline label', 'Distance': 'inline label', 'Date': 'inline label', 'Time': 'inline label', 'Pace': 'inline label', 'Elevation': 'inline label', 'Link': 'inline label', 'Streets': 'inline label', 'run': 'inline label', });
+lyr_gpstracks59_7.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
